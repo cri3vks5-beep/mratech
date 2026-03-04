@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "title": "UMKM Kuliner",
+      "tag": "Landing Page",
+      "duration": "3 hari",
+      "desc": "Fokus CTA WhatsApp + promo menu.",
+      "image": "assets/img/portfolio/portfolio-1.jpg"
+    },
+    {
+      "title": "Jasa Renovasi",
+      "tag": "Company Profile",
+      "duration": "5 hari",
+      "desc": "Layanan, portofolio, testimoni, kontak.",
+      "image": "assets/img/portfolio/portfolio-2.jpg"
+    },
+    {
+      "title": "Fashion & Aksesoris",
+      "tag": "Toko Online",
+      "duration": "10 hari",
+      "desc": "Katalog produk + order mudah.",
+      "image": "assets/img/portfolio/portfolio-3.jpg"
+    }
+  ]
+}

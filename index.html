@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <meta name="description" content="Jasa pembuatan website untuk UMKM & bisnis: landing page, company profile, toko online. Konsultasi gratis via WhatsApp." />
+  <meta name="theme-color" content="#5b2cff" />
+  <link rel="canonical noopener noreferrer" href="https://USERNAME.github.io/REPO/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MRA Tech — Jasa Pembuatan Website" />
+  <meta property="og:description" content="Website modern, cepat jadi (3–7 hari), harga terjangkau, konsultasi gratis via WhatsApp." />
+  <meta property="og:image" content="assets/img/og-image.png" />
+  <meta property="og:url" content="https://USERNAME.github.io/REPO/" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MRA Tech — Jasa Pembuatan Website" />
+  <meta name="twitter:description" content="Website modern, cepat jadi (3–7 hari), harga terjangkau, konsultasi gratis via WhatsApp." />
+  <meta name="twitter:image" content="assets/img/og-image.png" />
+
+<title>MRA Tech</title>
+  <link rel="icon noopener noreferrer" type="image/x-icon" href="assets/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet noopener noreferrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet noopener noreferrer" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-wrap { min-height: 92vh; display:flex; align-items:center; padding-top: 96px; padding-bottom: 32px; }
+    .badge-soft { background: rgba(13,110,253,.08); color: #0d6efd; border: 1px solid rgba(13,110,253,.15); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .rounded-xxl { border-radius: 18px; }
+    .logo-strip { opacity: .75; }
+    .logo-strip span { font-weight: 600; color: #6c757d; }
+    .section-title { letter-spacing: .2px; }
+    .navbar .nav-link { color: #495057; }
+    .navbar .nav-link:hover { color: #0d6efd; }
+  
+    :root{
+      --bs-primary:#5b2cff;
+      --bs-link-color:#5b2cff;
+      --bs-link-hover-color:#4a21e6;
+    }
+    body{ background:#fff; }
+    .hero-wrap{
+      position:relative;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(91,44,255,.10), transparent 55%),
+                  radial-gradient(900px 500px at 90% 30%, rgba(13,110,253,.08), transparent 55%);
+    }
+    .card-hover{ transition: transform .25s ease, box-shadow .25s ease; }
+    .card-hover:hover{ transform: translateY(-8px); box-shadow: 0 18px 45px rgba(0,0,0,.12); }
+    .btn-primary{ box-shadow: 0 10px 24px rgba(91,44,255,.22); }
+    .btn-primary:hover{ box-shadow: 0 14px 30px rgba(91,44,255,.28); }
+    .pill-muted{ background: rgba(108,117,125,.10); color:#6c757d; border:1px solid rgba(108,117,125,.15); }
+
+  
+    .section-divider{ border-top:1px solid rgba(0,0,0,.06); }
+    .portfolio-card img{ width:100%; height: 210px; object-fit: cover; border-top-left-radius: 18px; border-top-right-radius: 18px; }
+    .portfolio-card .tag{ font-size:.75rem; }
+    .accordion-button:not(.collapsed){ color: var(--bs-primary); background: rgba(91,44,255,.06); }
+    .accordion-item{ border: 1px solid rgba(0,0,0,.06); border-radius: 14px; overflow:hidden; }
+    .accordion-item + .accordion-item{ margin-top: 12px; }
+
+  
+    .step-card{ background:#fff; border:1px solid rgba(0,0,0,.06); }
+    .step-num{ width:44px; height:44px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+               background: rgba(91,44,255,.10); color: var(--bs-primary); font-weight:800; }
+    .mini-kpi{ background: rgba(25,135,84,.08); border: 1px solid rgba(25,135,84,.18); color:#198754; }
+
+  
+    .sticky-cta{
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 18px;
+      z-index: 9998;
+      width: min(980px, calc(100% - 24px));
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,0,0,.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,.14);
+      padding: 10px 12px;
+    }
+    .sticky-cta .price{
+      font-weight: 800;
+      color: #111;
+      white-space: nowrap;
+    }
+    .sticky-cta .sub{
+      color:#6c757d;
+      font-size: .85rem;
+      white-space: nowrap;
+    }
+    .sticky-cta .btn{ border-radius: 999px; }
+    @media (max-width: 575.98px){
+      .sticky-cta{ bottom: 10px; padding: 10px; }
+      .sticky-cta .sub{ display:none; }
+    }
+
+  
+    /* Pricing compare */
+    .compare-table th, .compare-table td { padding: 14px 16px; vertical-align: middle; }
+    .compare-table thead th { background: rgba(91,44,255,.06); border-bottom: 1px solid rgba(0,0,0,.06); }
+    .compare-table tbody tr { border-bottom: 1px solid rgba(0,0,0,.06); }
+    .compare-table .tick { color: #198754; font-weight: 800; }
+    .compare-table .dash { color: #adb5bd; }
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+
+  
+    .toggle-wrap{
+      display:inline-flex; gap:8px; padding:6px;
+      border:1px solid rgba(0,0,0,.08); border-radius:999px;
+      background: rgba(255,255,255,.75);
+    }
+    .toggle-btn{
+      border-radius:999px; padding:10px 14px; font-weight:700;
+      border:0; background: transparent; color:#6c757d;
+    }
+    .toggle-btn.active{
+      background: var(--bs-primary); color:#fff;
+      box-shadow: 0 10px 24px rgba(91,44,255,.22);
+    }
+    .price-lg{ font-weight:900; letter-spacing:-.2px; }
+
+  
+    .modal-portfolio .modal-content{ border:0; border-radius: 18px; overflow:hidden; }
+    .modal-portfolio .modal-header{ border:0; background: rgba(91,44,255,.06); }
+    .modal-portfolio .modal-title{ font-weight: 800; }
+    .modal-portfolio img{ width:100%; height:auto; display:block; }
+    .form-control, .form-select{ border-radius: 14px; }
+    .form-control:focus, .form-select:focus{ box-shadow: 0 0 0 .25rem rgba(91,44,255,.12); border-color: rgba(91,44,255,.35); }
+
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MRA Tech",
+  "url": "https://USERNAME.github.io/REPO/",
+  "telephone": "+62-821-1409-8105",
+  "areaServed": "Indonesia",
+  "sameAs": [],
+  "description": "Jasa pembuatan website untuk UMKM & bisnis: landing page, company profile, toko online."
+}
+  </script>
+</head>
+
+<body id="top">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm bg-white">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#top">MRA Tech</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#top">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#layanan">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#proses">Proses</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#harga">Harga</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#testimoni">Testimoni</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#maintenance">Maintenance</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#portofolio">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#order">Order</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#kontak">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3" href="#faq">FAQ</a></li>
+                  <li class="nav-item"><a class="nav-link px-lg-3" href="admin/">Admin</a></li>
+        </ul>
+
+        <!-- CTA NAVBAR (kayak WebEsia) -->
+        <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary ms-lg-3 rounded-pill px-4" rel="noopener noreferrer">
+          <i class="bi bi-chat-dots-fill me-2"></i>Cek Harga
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-wrap">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <!-- Kiri -->
+        <div class="col-lg-6">
+          <span class="badge badge-soft rounded-pill px-3 py-2 mb-3 d-inline-flex align-items-center">
+            <i class="bi bi-lightning-charge-fill me-2"></i>Website cepat jadi • Konsultasi gratis
+          </span>
+
+          <h1 class="display-4 fw-bold mb-3">
+            Website Profesional untuk UMKM &amp; Bisnis
+          </h1>
+
+          <p class="text-muted mb-4 fs-5">
+            MRA Tech bantu bisnis kamu punya website modern, cepat, dan siap dipakai promosi di era digital.
+          </p>
+
+          <ul class="list-unstyled mb-4 fs-6">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Website jadi cepat (3–7 hari)</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Harga terjangkau &amp; hasil profesional</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Free konsultasi &amp; revisi sampai beres</li>
+          </ul>
+
+          <div class="d-flex flex-column flex-sm-row gap-2 align-items-start">
+            <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary btn-lg rounded-pill px-4" rel="noopener noreferrer">
+              Konsultasi Gratis via WhatsApp
+            </a>
+            <a href="#layanan" class="btn btn-outline-primary btn-lg rounded-pill px-4">
+              Lihat Layanan
+            </a>
+          </div>
+
+          <div class="text-muted mt-3 small">
+            Respon cepat • Brief simpel • Proses jelas
+          </div>
+        </div>
+
+        <!-- Kanan -->
+        <div class="col-lg-6 text-center">
+          <img
+            src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1400&q=80"
+            class="img-fluid rounded-xxl shadow-soft"
+            style="max-height: 420px; width: 100%; object-fit: cover;"
+            alt="Preview website"
+          / width="1400" height="900">
+
+          <div class="card border-0 shadow-soft mt-4 mx-auto rounded-xxl card-hover" style="max-width: 520px;">
+            <div class="card-body p-4 text-start">
+              <div class="d-flex align-items-start justify-content-between gap-3">
+                <div>
+                  <div class="fw-bold fs-5 mb-1">Harga mulai Rp700K</div>
+                  <div class="text-muted">Sesuaikan kebutuhan: landing page, company profile, hingga toko online.</div>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-2">
+                  Promo
+                </span>
+              </div>
+
+              <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary rounded-pill px-4 mt-3" rel="noopener noreferrer">
+                Cek Harga via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGO STRIP (partner/tools) -->
+      <div class="row text-center align-items-center g-3 mt-5 logo-strip">
+        <div class="col-6 col-md"><span>WordPress</span></div>
+        <div class="col-6 col-md"><span>Elementor</span></div>
+        <div class="col-6 col-md"><span>cPanel</span></div>
+        <div class="col-6 col-md"><span>Midtrans</span></div>
+        <div class="col-6 col-md"><span>Xendit</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- LAYANAN -->
+  <section id="layanan" class="py-5 bg-light">
+    <div class="container py-2 py-md-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold section-title">Layanan Kami</h2>
+        <p class="text-muted mb-0">Pilih paket sesuai kebutuhan bisnis kamu.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-xxl shadow-soft h-100 card-hover reveal">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-window fs-3 text-primary me-3"></i>
+              <h5 class="mb-0 fw-bold">Landing Page</h5>
+            </div>
+            <p class="text-muted mb-3">Cocok untuk promosi produk/jasa dan fokus ke konversi WhatsApp.</p>
+            <ul class="text-muted small mb-0 ps-3">
+              <li>1 halaman</li>
+              <li>CTA WhatsApp</li>
+              <li>Mobile friendly</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-xxl shadow-soft h-100 card-hover reveal">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-building fs-3 text-primary me-3"></i>
+              <h5 class="mb-0 fw-bold">Company Profile</h5>
+            </div>
+            <p class="text-muted mb-3">Profil bisnis rapi: layanan, portofolio, testimoni, dan kontak.</p>
+            <ul class="text-muted small mb-0 ps-3">
+              <li>3–6 halaman</li>
+              <li>Portofolio</li>
+              <li>Form/WA</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-xxl shadow-soft h-100 card-hover reveal">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-cart fs-3 text-primary me-3"></i>
+              <h5 class="mb-0 fw-bold">Toko Online</h5>
+            </div>
+            <p class="text-muted mb-3">Katalog produk, order via WA / checkout, dan opsi pembayaran.</p>
+            <ul class="text-muted small mb-0 ps-3">
+              <li>Katalog produk</li>
+              <li>Order mudah</li>
+              <li>Payment opsional</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary rounded-pill px-4" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp me-2"></i>Konsultasi Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- PROSES KERJA -->
+  <section id="proses" class="py-5 section-divider">
+    <div class="container py-2 py-md-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold section-title">Proses Kerja</h2>
+        <p class="text-muted mb-0">Simple, jelas, dan terarah—biar website cepat jadi.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="p-4 rounded-xxl shadow-soft h-100 card-hover step-card reveal">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="step-num">1</div>
+              <div class="fw-bold">Konsultasi</div>
+            </div>
+            <div class="text-muted small">
+              Ceritain kebutuhan: jenis website, contoh referensi, dan target jadi.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="p-4 rounded-xxl shadow-soft h-100 card-hover step-card reveal">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="step-num">2</div>
+              <div class="fw-bold">Desain</div>
+            </div>
+            <div class="text-muted small">
+              Kita susun layout & tampilan. Kamu review, lalu revisi sampai oke.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="p-4 rounded-xxl shadow-soft h-100 card-hover step-card reveal">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="step-num">3</div>
+              <div class="fw-bold">Pengerjaan</div>
+            </div>
+            <div class="text-muted small">
+              Implement halaman + tombol WA + optimasi kecepatan & mobile friendly.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="p-4 rounded-xxl shadow-soft h-100 card-hover step-card reveal">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="step-num">4</div>
+              <div class="fw-bold">Go Live</div>
+            </div>
+            <div class="text-muted small">
+              Website dipublish ke domain/hosting. Kamu siap promosi.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3 mt-4 justify-content-center text-center">
+        <div class="col-12 col-md-4">
+          <div class="mini-kpi rounded-pill py-2 px-3 d-inline-flex align-items-center gap-2">
+            <i class="bi bi-lightning-charge-fill"></i><span class="small fw-semibold">Estimasi 3–7 hari*</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="mini-kpi rounded-pill py-2 px-3 d-inline-flex align-items-center gap-2">
+            <i class="bi bi-shield-check"></i><span class="small fw-semibold">Revisi sesuai paket</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="mini-kpi rounded-pill py-2 px-3 d-inline-flex align-items-center gap-2">
+            <i class="bi bi-phone"></i><span class="small fw-semibold">Mobile friendly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 text-muted small">
+        *Waktu bisa berubah sesuai jumlah halaman & materi konten.
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HARGA -->
+  <section id="harga" class="py-5">
+    <div class="container py-2 py-md-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold section-title">Pilih Paket Website</h2>
+        <p class="text-muted mb-0">Harga transparan. Bisa disesuaikan kebutuhan bisnis kamu.</p>
+      </div>
+      <div class="text-center mb-4 reveal">
+        <div class="toggle-wrap">
+          <button class="toggle-btn active" type="button" data-pricing="sekali">Sekali Bayar</button>
+          <button class="toggle-btn" type="button" data-pricing="maintenance">Maintenance Bulanan</button>
+        </div>
+        <div class="text-muted small mt-2">Pilih mode harga sesuai kebutuhan.</div>
+      </div>
+
+
+      <div class="row g-4">
+        <!-- Basic -->
+        <div class="col-md-4">
+          <div class="card border-0 rounded-xxl shadow-soft h-100 card-hover">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h5 class="fw-bold mb-0">Basic</h5>
+                <span class="badge pill-muted rounded-pill px-3 py-2">Starter</span>
+              </div>
+              <div class="display-6 price-lg my-3" data-price="sekali">Rp700K</div>
+              <div class="display-6 price-lg my-3 d-none" data-price="maintenance">Rp149K<span class="fs-6 text-muted">/bulan</span></div>
+              <ul class="text-muted small ps-3 mb-4">
+                <li>1 halaman (landing)</li>
+                <li>Desain modern & mobile friendly</li>
+                <li>Tombol WhatsApp + CTA</li>
+                <li>Revisi 2x</li>
+                <li class="text-muted"><span class="badge pill-muted rounded-pill px-3 py-2 mt-2">Mode bulanan: update konten ringan</span></li>
+              </ul>
+              <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-outline-primary rounded-pill w-100" rel="noopener noreferrer">
+                Pilih Paket
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pro -->
+        <div class="col-md-4">
+          <div class="card border-0 rounded-xxl shadow-soft h-100 card-hover" style="outline:2px solid rgba(91,44,255,.18);">
+            <div class="card-body p-4">
+              <span class="badge bg-primary rounded-pill px-3 py-2 mb-3">Paling Laris</span>
+              <h5 class="fw-bold mb-0">Pro</h5>
+              <div class="display-6 price-lg my-3" data-price="sekali">Rp1.500K</div>
+              <div class="display-6 price-lg my-3 d-none" data-price="maintenance">Rp249K<span class="fs-6 text-muted">/bulan</span></div>
+              <ul class="text-muted small ps-3 mb-4">
+                <li>3–5 halaman</li>
+                <li>Optimasi kecepatan</li>
+                <li>SEO dasar + struktur rapi</li>
+                <li>Revisi 3x</li>
+                <li class="text-muted"><span class="badge pill-muted rounded-pill px-3 py-2 mt-2">Mode bulanan: optimasi + support</span></li>
+              </ul>
+              <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary rounded-pill w-100" rel="noopener noreferrer">
+                Pilih Paket
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bisnis -->
+        <div class="col-md-4">
+          <div class="card border-0 rounded-xxl shadow-soft h-100 card-hover">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h5 class="fw-bold mb-0">Bisnis</h5>
+                <span class="badge pill-muted rounded-pill px-3 py-2">Custom</span>
+              </div>
+              <div class="display-6 price-lg my-3" data-price="sekali">Custom</div>
+              <div class="display-6 price-lg my-3 d-none" data-price="maintenance">Rp399K<span class="fs-6 text-muted">/bulan</span></div>
+              <ul class="text-muted small ps-3 mb-4">
+                <li>Toko online / katalog</li>
+                <li>Payment gateway (opsional)</li>
+                <li>Integrasi form/CRM sederhana</li>
+                <li>Maintenance (opsional)</li>
+                <li class="text-muted"><span class="badge pill-muted rounded-pill px-3 py-2 mt-2">Mode bulanan: include maintenance</span></li>
+              </ul>
+              <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-outline-primary rounded-pill w-100" rel="noopener noreferrer">
+                Konsultasi
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <div class="text-muted small">*Harga dapat berubah sesuai kebutuhan & kompleksitas.</div>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <div class="col-12">
+          <div class="p-4 p-md-5 bg-light rounded-xxl shadow-soft reveal">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+              <div>
+                <h3 class="fw-bold mb-1">Perbandingan Paket</h3>
+                <div class="text-muted">Biar gampang milih. (Bisa kamu ubah kapan aja.)</div>
+              </div>
+              <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary rounded-pill px-4" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp me-2"></i>Konsultasi Pilih Paket
+              </a>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table mb-0 compare-table align-middle">
+                <thead>
+                  <tr>
+                    <th>Fitur</th>
+                    <th class="text-center">Basic</th>
+                    <th class="text-center">Pro</th>
+                    <th class="text-center">Bisnis</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jumlah halaman</td>
+                    <td class="text-center">1</td>
+                    <td class="text-center">3–5</td>
+                    <td class="text-center">Custom</td>
+                  </tr>
+                  <tr>
+                    <td>Desain modern + mobile</td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                  </tr>
+                  <tr>
+                    <td>CTA WhatsApp</td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                  </tr>
+                  <tr>
+                    <td>Optimasi kecepatan</td>
+                    <td class="text-center"><span class="dash">—</span></td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                  </tr>
+                  <tr>
+                    <td>SEO dasar</td>
+                    <td class="text-center"><span class="dash">—</span></td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                  </tr>
+                  <tr>
+                    <td>Payment gateway</td>
+                    <td class="text-center"><span class="dash">—</span></td>
+                    <td class="text-center"><span class="dash">—</span></td>
+                    <td class="text-center"><span class="tick">✓</span></td>
+                  </tr>
+                  <tr>
+                    <td>Revisi</td>
+                    <td class="text-center">2x</td>
+                    <td class="text-center">3x</td>
+                    <td class="text-center">Sesuai kesepakatan</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="text-muted small mt-3">
+              *Kalau kamu belum yakin, pilih <b>Pro</b> dulu — paling pas untuk mayoritas UMKM.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+    <!-- PORTOFOLIO -->
+  <section id="portofolio" class="py-5 section-divider">
+    <div class="container py-2 py-md-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+        <div>
+          <h2 class="fw-bold section-title mb-1">Project &amp; Portofolio</h2>
+          <p class="text-muted mb-0">Contoh tampilan (placeholder). Nanti bisa diganti dengan project asli + link.</p>
+        </div>
+        <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-outline-primary rounded-pill px-4" rel="noopener noreferrer">
+          <i class="bi bi-images me-2"></i>Minta Contoh Lain
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <div class="row g-4" id="portfolioGrid"></div>
+</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-5 bg-light section-divider">
+    <div class="container py-2 py-md-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold section-title">FAQ</h2>
+        <p class="text-muted mb-0">Pertanyaan yang sering ditanyain (bisa kamu ubah).</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item shadow-soft reveal">
+              <h2 class="accordion-header" id="q1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                  Berapa lama pengerjaannya?
+                </button>
+              </h2>
+              <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  Umumnya 3–7 hari untuk landing/company profile. Untuk toko online tergantung jumlah produk & fitur.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item shadow-soft reveal">
+              <h2 class="accordion-header" id="q2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                  Bisa revisi berapa kali?
+                </button>
+              </h2>
+              <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  Bisa. Basic 2x revisi, Pro 3x revisi. Untuk paket custom menyesuaikan kesepakatan.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item shadow-soft reveal">
+              <h2 class="accordion-header" id="q3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                  Domain & hosting gimana?
+                </button>
+              </h2>
+              <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  Bisa dibantu rekomendasi & setup. Kalau kamu sudah punya domain/hosting, kita tinggal pasang.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item shadow-soft reveal">
+              <h2 class="accordion-header" id="q4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+                  Pembayaran bisa bertahap?
+                </button>
+              </h2>
+              <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  Bisa. Umumnya DP dulu, sisanya setelah demo/finishing. Detailnya kita bahas pas konsultasi.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ORDER / LEAD FORM -->
+  <section id="order" class="py-5 section-divider">
+    <div class="container py-2 py-md-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold section-title mb-2">Mau Dibikinin? Isi Dulu, Biar Cepat Dibalas</h2>
+          <p class="text-muted mb-4">
+            Isi form singkat ini. Setelah klik kirim, WhatsApp bakal kebuka otomatis dengan template pesan.
+          </p>
+
+          <div class="p-4 bg-light rounded-xxl shadow-soft reveal">
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label fw-semibold">Nama</label>
+                <input id="leadName" type="text" class="form-control" placeholder="Contoh: Andi" />
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold">Nomor WhatsApp</label>
+                <input id="leadWa" type="tel" class="form-control" placeholder="Contoh: 0812xxxxxxx" />
+                <div class="text-muted small mt-1">Boleh kosong kalau kamu mau langsung chat saja.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold">Jenis Website</label>
+                <select id="leadType" class="form-select">
+                  <option value="Landing Page">Landing Page</option>
+                  <option value="Company Profile">Company Profile</option>
+                  <option value="Toko Online">Toko Online</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold">Catatan / Kebutuhan</label>
+                <textarea id="leadNote" class="form-control" rows="4" placeholder="Contoh: butuh 3 halaman, ada portofolio, mau warna ungu, target selesai minggu ini..."></textarea>
+              </div>
+              <div class="col-12 d-grid">
+                <button id="leadSubmit" class="btn btn-primary btn-lg rounded-pill">
+                  <i class="bi bi-whatsapp me-2"></i>Kirim via WhatsApp
+                </button>
+              </div>
+              <div class="col-12">
+                <div class="text-muted small">
+                  Dengan klik tombol ini, kamu setuju untuk menghubungi MRA Tech via WhatsApp.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="p-4 bg-white rounded-xxl shadow-soft reveal">
+            <div class="fw-bold mb-2">Contoh format chat yang rapi</div>
+            <div class="text-muted small mb-3">Auto-generate dari form di sebelah kiri.</div>
+            <div class="bg-light rounded-3 p-3 small" id="leadPreview">
+              Halo MRA Tech, saya mau buat website...
+            </div>
+            <div class="text-muted small mt-3">
+              Tips: kalau kamu punya referensi, siapin link/screenshot supaya briefing makin cepat.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- KONTAK -->
+
+  <section id="kontak" class="py-5 bg-light">
+    <div class="container py-2 py-md-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="fw-bold section-title mb-3">Kontak</h2>
+          <p class="text-muted mb-4">
+            Tinggal chat WhatsApp untuk konsultasi: jenis website, contoh referensi, dan info bisnis.
+            Nanti kita bantu susun struktur + estimasi harga.
+          </p>
+
+          <div class="d-inline-flex align-items-center gap-2 mb-4">
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-2">
+              <i class="bi bi-shield-check me-1"></i>Garansi support 7 hari
+            </span>
+            <span class="badge pill-muted rounded-pill px-3 py-2">
+              <i class="bi bi-arrow-repeat me-1"></i>Revisi sesuai paket
+            </span>
+          </div>
+
+          <div class="d-flex flex-column gap-2">
+            <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary btn-lg rounded-pill px-4 align-self-start" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp
+            </a>
+            <div class="text-muted small">
+              Jam respon: 09.00–21.00 • (bisa kamu ubah)
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="p-4 bg-white rounded-xxl shadow-soft">
+            <div class="fw-bold mb-2">Format chat biar cepat dibalas</div>
+            <div class="text-muted small mb-3">Copy-paste ke WhatsApp:</div>
+            <div class="bg-light rounded-3 p-3 small">
+              Halo MRA Tech, saya mau buat website.<br />
+              Jenis: (Landing/Company/Toko)<br />
+              Bidang usaha: ...<br />
+              Referensi: (link/screenshot)<br />
+              Target jadi: ...<br />
+              Budget: ...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  
+
+  <!-- PORTFOLIO MODALS -->
+  <div class="modal fade modal-portfolio" id="portfolioModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header px-4 py-3">
+          <div>
+            <div class="modal-title">UMKM Kuliner — Landing Page</div>
+            <div class="text-muted small">Fokus CTA WhatsApp + promo menu</div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80" alt="Mockup" loading="lazy" width="1400" height="900">
+          <div class="p-4">
+            <div class="row g-3">
+              <div class="col-md-4"><div class="p-3 bg-light rounded-3"><div class="fw-bold">Durasi</div><div class="text-muted small">3 hari</div></div></div>
+              <div class="col-md-4"><div class="p-3 bg-light rounded-3"><div class="fw-bold">Halaman</div><div class="text-muted small">1 halaman</div></div></div>
+              <div class="col-md-4"><div class="p-3 bg-light rounded-3"><div class="fw-bold">CTA</div><div class="text-muted small">WhatsApp</div></div></div>
+            </div>
+            <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary rounded-pill px-4 mt-4" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Request yang Mirip
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-portfolio" id="portfolioModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header px-4 py-3">
+          <div>
+            <div class="modal-title">Jasa Renovasi — Company Profile</div>
+            <div class="text-muted small">Layanan, portofolio, testimoni, kontak</div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80" alt="Mockup" loading="lazy" width="1400" height="900">
+          <div class="p-4">
+            <div class="row g-3">
+              <div class="col-md-4"><div class="p-3 bg-light rounded-3"><div class="fw-bold">Durasi</div><div class="text-muted small">5 hari</div></div></div>
+              <div class="col-md-4"><div class="p-3 bg-light rounded-3"><div class="fw-bold">Halaman</div><div class="text-muted small">4 halaman</div></div></div>
+              <div class="col-md-4"><div class="p-3 bg-light rounded-3"><div class="fw-bold">Fitur</div><div class="text-muted small">Portofolio</div></div></div>
+            </div>
+            <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary rounded-pill px-4 mt-4" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Request yang Mirip
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-portfolio" id="portfolioModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header px-4 py-3">
+          <div>
+            <div class="modal-title">Fashion — Toko Online</div>
+            <div class="text-muted small">Katalog produk + order mudah</div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1600&q=80" alt="Mockup" loading="lazy" width="1400" height="900">
+          <div class="p-4">
+            <div class="row g-3">
+              <div class="col-md-4"><div class="p-3 bg-light rounded-3"><div class="fw-bold">Durasi</div><div class="text-muted small">10 hari</div></div></div>
+              <div class="col-md-4"><div class="p-3 bg-light rounded-3"><div class="fw-bold">Produk</div><div class="text-muted small">Custom</div></div></div>
+              <div class="col-md-4"><div class="p-3 bg-light rounded-3"><div class="fw-bold">Fitur</div><div class="text-muted small">Katalog</div></div></div>
+            </div>
+            <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary rounded-pill px-4 mt-4" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Request yang Mirip
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FINAL CTA -->
+  <section class="py-5 section-divider">
+    <div class="container py-2 py-md-4">
+      <div class="bg-light rounded-xxl shadow-soft p-4 p-md-5 reveal">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-2">Siap bikin website yang bener-bener jualan?</h2>
+            <div class="text-muted">Klik chat WhatsApp, kirim kebutuhan kamu. Kita balas dengan estimasi & rekomendasi paket.</div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary btn-lg rounded-pill px-4" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Chat Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<footer class="py-4 bg-white border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div class="text-muted small">© <span id="year"></span> MRA Tech. All Rights Reserved.</div>
+      <div class="d-flex gap-3 small">
+        <a class="text-muted text-decoration-none" href="#top">Home</a>
+        <a class="text-muted text-decoration-none" href="#layanan">Layanan</a>
+        <a class="text-muted text-decoration-none" href="#proses">Proses</a>
+        <a class="text-muted text-decoration-none" href="#harga">Harga</a>
+        <a class="text-muted text-decoration-none" href="#testimoni">Testimoni</a>
+        <a class="text-muted text-decoration-none" href="#kontak">Kontak</a>
+        <a class="text-muted text-decoration-none" href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a<a href="https://wa.me/6282114098105"
+     target="_blank"
+     class="d-sm-none"
+     style="position:fixed; bottom:20px; right:20px; z-index:9999; text-decoration:none;" rel="noopener noreferrer">
+    <span style="display:flex; align-items:center; gap:10px; background:#25D366; color:white; padding:12px 16px; border-radius:999px; box-shadow:0 10px 30px rgba(0,0,0,.18); font-weight:700;">
+      <i class="bi bi-whatsapp" style="font-size:20px;"></i>Hubungi Kami
+    </span>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Sticky CTA Bar -->
+  <div class="sticky-cta">
+    <div class="d-flex align-items-center justify-content-between gap-2">
+      <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-1 gap-sm-3">
+        <div class="price">Mulai Rp700K</div>
+        <div class="sub">Chat sekarang, estimasi cepat</div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <a href="#harga" class="btn btn-outline-primary px-3">
+          <i class="bi bi-tags me-1"></i>Harga
+        </a>
+        <a<a href="https://wa.me/6282114098105" target="_blank" class="btn btn-primary px-4" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp me-2"></i>Chat WA
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    // Reveal on scroll (simple, no library)
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('show');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+
+
+  <script>
+    // Pricing toggle (Sekali Bayar vs Maintenance Bulanan)
+    (function () {
+      const btns = document.querySelectorAll('[data-pricing]');
+      const blocks = document.querySelectorAll('#harga [data-price]');
+      if (!btns.length || !blocks.length) return;
+
+      function setMode(mode){
+        blocks.forEach(b => {
+          const show = b.getAttribute('data-price') === mode;
+          b.classList.toggle('d-none', !show);
+        });
+        btns.forEach(b => b.classList.toggle('active', b.getAttribute('data-pricing') === mode));
+      }
+
+      btns.forEach(b => b.addEventListener('click', () => setMode(b.getAttribute('data-pricing'))));
+      setMode('sekali');
+    })();
+  </script>
+
+
+  <script>
+    (function () {
+      const waNumber = "6282114098105";
+      const nameEl = document.getElementById('leadName');
+      const waEl = document.getElementById('leadWa');
+      const typeEl = document.getElementById('leadType');
+      const noteEl = document.getElementById('leadNote');
+      const previewEl = document.getElementById('leadPreview');
+      const btn = document.getElementById('leadSubmit');
+
+      if (!nameEl || !typeEl || !noteEl || !previewEl || !btn) return;
+
+      function buildMessage() {
+        const name = (nameEl.value || "").trim();
+        const wa = (waEl?.value || "").trim();
+        const type = (typeEl.value || "").trim();
+        const note = (noteEl.value || "").trim();
+
+        let msg = "Halo MRA Tech, saya mau buat website.";
+        if (name) msg += "\nNama: " + name;
+        if (wa) msg += "\nWA: " + wa;
+        msg += "\nJenis: " + type;
+        if (note) msg += "\nKebutuhan: " + note;
+        msg += "\n\nBoleh minta estimasi harga & waktu pengerjaan?";
+        return msg;
+      }
+
+      function renderPreview(){
+        previewEl.textContent = buildMessage();
+      }
+
+      ['input','change'].forEach(evt => {
+        nameEl.addEventListener(evt, renderPreview);
+        if (waEl) waEl.addEventListener(evt, renderPreview);
+        typeEl.addEventListener(evt, renderPreview);
+        noteEl.addEventListener(evt, renderPreview);
+      });
+
+      btn.addEventListener('click', function () {
+        const text = encodeURIComponent(buildMessage());
+        window.open("https://wa.me/" + waNumber + "?text=" + text, "_blank");
+      });
+
+      renderPreview();
+    })();
+  </script>
+
+
+<!-- NOTE: Ganti USERNAME & REPO di canonical/og:url/schema url biar sesuai GitHub Pages kamu. -->
+  <script src="js/portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: USERNAME/REPO
+  branch: main
+
+media_folder: "assets/img/portfolio"
+public_folder: "/assets/img/portfolio"
+
+collections:
+  - name: "content"
+    label: "Konten"
+    files:
+      - name: "portfolio"
+        label: "Portfolio"
+        file: "content/portfolio.json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Judul", name: "title", widget: "string" }
+              - { label: "Kategori/Tag", name: "tag", widget: "string" }
+              - { label: "Durasi", name: "duration", widget: "string", required: false }
+              - { label: "Deskripsi", name: "desc", widget: "text", required: false }
+              - { label: "Gambar", name: "image", widget: "image" }
