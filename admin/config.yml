@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: cri3vks5-beep/mratech
   branch: main
+
+site_url: https://rococo-cobbler-f02027.netlify.app
 
 media_folder: "assets/img/portfolio"
 public_folder: "/assets/img/portfolio"
