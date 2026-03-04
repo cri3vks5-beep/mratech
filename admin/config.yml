@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  repo: cri3vks5-beep/mratech
   branch: main
 
 site_url: https://rococo-cobbler-f02027.netlify.app
