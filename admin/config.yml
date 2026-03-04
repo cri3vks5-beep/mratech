@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: USERNAME/REPO
+  name: git-gateway
   branch: main
 
 media_folder: "assets/img/portfolio"
