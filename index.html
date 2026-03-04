@@ -146,6 +146,22 @@
   "description": "Jasa pembuatan website untuk UMKM & bisnis: landing page, company profile, toko online."
 }
   </script>
+
+<script>
+  // Netlify Identity: if user clicks "reset password" email, Netlify opens site root with #recovery_token=...
+  // This helper forwards the user to /admin/ so Decap CMS can complete the recovery flow.
+  (function () {
+    var h = window.location.hash || "";
+    var needsAdmin =
+      h.indexOf("recovery_token=") !== -1 ||
+      h.indexOf("invite_token=") !== -1 ||
+      h.indexOf("confirmation_token=") !== -1;
+    if (needsAdmin && window.location.pathname.indexOf("/admin") === -1) {
+      window.location.replace("/admin/" + h);
+    }
+  })();
+</script>
+
 </head>
 
 <body id="top">
